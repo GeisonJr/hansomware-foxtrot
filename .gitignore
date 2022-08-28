@@ -1,0 +1,19 @@
+# Dependency directories
+node_modules
+
+# Logs
+*.log
+
+# Environments
+.env
+.env.test
+
+# Build
+dist
+
+# Tests
+coverage
+
+# Dump
+.dump
+old.*

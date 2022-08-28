@@ -1,0 +1,71 @@
+{
+  "name": "@hansomware/foxtrot",
+  "description": "HansoMWarE Foxtrot Library",
+  "author": "HansoMWarE Inc.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "contributors": [
+    "GeionJr <geison.oriani@outlook.com>"
+  ],
+  "keywords": [
+    "hansomware",
+    "foxtrot"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geisonjr/hansomware-foxtrot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/geisonjr/hansomware-foxtrot/issues"
+  },
+  "homepage": "https://hansomware.com.br",
+  "module": "dist/foxtrot.esm.js",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --coverage",
+    "lint": "tsdx lint ./src/**/**/*.ts --fix",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "size-limit": [
+    {
+      "path": "dist/mylib.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/mylib.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^8.0.1",
+    "husky": "^8.0.1",
+    "size-limit": "^8.0.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.2"
+  }
+}
